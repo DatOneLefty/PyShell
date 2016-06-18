@@ -1,15 +1,21 @@
 def command(command):
+	if not command:
+		return 1
 	if command[0] == "help":
 		import module.help
-	else if command[0] == "print":
+		return 0
+	elif command[0] == "print":
 		import module.printer
 		module.printer.echo(command);
-	else if command[0] == "stop":
+		return 0
+	elif command[0] == "stop":
 		import sys
 		print "Exiting..."
 		sys.exit();
-	else if command[0] == "info":
+		return 0
+	elif command[0] == "info":
 		import module.info
+		return 0
 	else:
-		print "Command not found"
+		return 2
 			
