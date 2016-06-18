@@ -1,6 +1,7 @@
 print """
-For Version: v0r0b0c1
+For Version: v0r0b0c6
 
 help		 show commands
-info		 about system
+print [data]     print data
+stop		 stop system
 """
