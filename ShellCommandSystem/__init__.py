@@ -16,6 +16,13 @@ def command(command):
 	elif command[0] == "info":
 		import module.info
 		return 0
+	elif command[0] == "cd":
+		import module.cd
+		module.cd.chdir(command)
+	elif command[0] == "ls":
+		import os
+		import module.ls
+		module.ls.ls(os.getcwd())
 	else:
 		return 2
 			
